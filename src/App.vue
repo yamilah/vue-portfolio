@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <main-nav></main-nav>
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
   </div>
 
 </template>
 
 <script>
-import Nav from '@/components/Nav'
+  import Nav from '@/components/Nav'
 
-export default {
-  components: {
-    'main-nav': Nav
+  export default {
+    components: {
+      'main-nav': Nav
+    }
   }
-}
 </script>
 
 <style lang="sass">
