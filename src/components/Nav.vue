@@ -20,7 +20,6 @@
 <script>
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 
   //Shorthand for font styling
@@ -30,10 +29,6 @@
   // Shorthand for aligning items with flex
   =alignment($position)
     align-items: $position
-
-  // Set the display type
-  =display($property)
-    display: $property
 
   $nav-letterspacing: 2px
 
@@ -47,7 +42,7 @@
     text-transform: uppercase
 
   nav
-    +display(flex)
+    display: flex
     +alignment(center)
 
     +typeface($family: "Mukta Vaani")
@@ -56,7 +51,7 @@
     @extend .uppercase
 
     ul
-      +display(flex)
+      display: flex
 
     a, a:hover, a:focus
       color: black
@@ -69,9 +64,8 @@
 
     li
       border-bottom: 1px solid rgba(0,0,0,0)
-
-    li:not(:first-child)
-      margin-left: 30px
+      &:not(:first-child)
+        margin-left: 30px
 
     li:hover, ul .router-link-active
       border-bottom: 1px solid black

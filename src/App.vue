@@ -23,4 +23,17 @@
     // Import the two typefaces I'm using
     @import url(https://fonts.googleapis.com/css?family=Cormorant)
     @import url(https://fonts.googleapis.com/css?family=Mukta+Vaani)
+
+    // Apply these to push footer to bottom
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+
+  // Make footer sticky to bottom
+  main
+    flex: 1
+
+  // Compensate for top nav height
+  .container, .row
+    padding-top: 97px
 </style>
