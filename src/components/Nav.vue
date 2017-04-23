@@ -1,18 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">
-      <img src="../assets/personal-logo.svg">
-    </router-link>
-    <ul>
-      <li>
-        <router-link to="/">Work</router-link>
-      </li>
-      <li>
-        <router-link to="/contact">Contact</router-link>
-      </li>
-      <li>Resume</li>
-    </ul>
-  </nav>
+  <div class="sticky">
+    <nav>
+      <router-link to="/">
+        <img src="../assets/personal-logo.svg">
+      </router-link>
+      <ul>
+        <li>
+          <router-link to="/">Work</router-link>
+        </li>
+        <li>
+          <router-link to="/contact">Contact</router-link>
+        </li>
+        <li>Resume</li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -34,6 +36,12 @@
     display: $property
 
   $nav-letterspacing: 2px
+
+  .sticky
+    position: fixed
+    z-index: 2
+    width: 100%
+    background-color: white
 
   .uppercase
     text-transform: uppercase
