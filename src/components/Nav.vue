@@ -11,7 +11,9 @@
         <li>
           <router-link to="/contact">Contact</router-link>
         </li>
-        <li>Resume</li>
+        <a href="/static/resume.pdf" target="_blank">
+          <li>Resume</li>
+        </a>
       </ul>
     </nav>
   </div>
@@ -46,17 +48,16 @@
 
     img
       width: 30px
-      margin-right: 50px
+      margin-right: 20px
 
     li
       +typeface($family: "Mukta Vaani")
       letter-spacing: 2px
       @extend .uppercase
 
-      border-bottom: 1px solid rgba(0,0,0,0)
+      margin-left: 30px
 
-      &:not(:first-child)
-        margin-left: 30px
+      border-bottom: 1px solid rgba(0,0,0,0)
 
     li:hover, ul .router-link-active
       border-bottom: 1px solid black
