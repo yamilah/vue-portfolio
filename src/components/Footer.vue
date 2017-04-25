@@ -8,9 +8,8 @@
 </script>
 
 <style lang="sass" scoped>
-  //Shorthand for font styling
-  =typeface($style: normal, $variant: normal, $weight: 400, $line-height: 14px, $family: "Cormorant")
-    font: $style $variant $weight $line-height $family
+  
+  @import ../sass/utils
 
   footer
     padding: 30px

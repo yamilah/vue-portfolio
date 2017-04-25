@@ -22,15 +22,7 @@
 
 <style lang="sass" scoped>
 
-  //Shorthand for font styling
-  =typeface($style: normal, $variant: normal, $weight: 400, $line-height: 14px, $family: "Cormorant")
-    font: $style $variant $weight $line-height $family
-
-  // Shorthand for aligning items with flex
-  =alignment($position)
-    align-items: $position
-
-  $nav-letterspacing: 2px
+  @import ../sass/utils
 
   .sticky
     position: fixed
@@ -38,17 +30,11 @@
     width: 100%
     background-color: white
 
-  .uppercase
-    text-transform: uppercase
-
   nav
     display: flex
-    +alignment(center)
+    align-items: center
 
-    +typeface($family: "Mukta Vaani")
-    letter-spacing: $nav-letterspacing
     padding: 30px
-    @extend .uppercase
 
     ul
       display: flex
@@ -63,7 +49,12 @@
       margin-right: 50px
 
     li
+      +typeface($family: "Mukta Vaani")
+      letter-spacing: 2px
+      @extend .uppercase
+
       border-bottom: 1px solid rgba(0,0,0,0)
+
       &:not(:first-child)
         margin-left: 30px
 
