@@ -15,6 +15,9 @@
 
   @import ../sass/utils
 
+  .container
+    @extend .main-margin
+
   main
     display: flex
     justify-content: center
@@ -23,4 +26,5 @@
       +typeface($weight: 300)
       font-size: 30px
       font-variant-ligatures: discretionary-ligatures
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="row">
+    <div class="row main-margin">
       <div class="work col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6" v-for="work in works">
         <router-link :to="work.slug">
           <div class="work-img" :style="{ backgroundImage: `url(${work.img})` }"></div>
@@ -54,9 +54,7 @@
 
   .work-img
     height: 65vw
-    background-position: center center
-    background-size: 100%
-    background-repeat: no-repeat
+    @extend .css-image
 
     display: flex
 

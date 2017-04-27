@@ -19,6 +19,7 @@
 </script>
 
 <style lang="sass">
+
   #app
     // Import the two typefaces I'm using
     @import url(https://fonts.googleapis.com/css?family=Mukta+Vaani:200,300,400,500,600,700,800)
@@ -33,7 +34,4 @@
   main
     flex: 1
 
-  // Compensate for top nav height
-  .container, .row, .container-fluid
-    padding-top: 97px
 </style>
