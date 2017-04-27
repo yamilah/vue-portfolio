@@ -34,6 +34,6 @@
     flex: 1
 
   // Compensate for top nav height
-  .container, .row
+  .container, .row, .container-fluid
     padding-top: 97px
 </style>

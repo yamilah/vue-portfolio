@@ -2,56 +2,22 @@
   <main>
     <div class="row">
       <div class="work col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6" v-for="work in works">
-        <div class="work-img" :style="{ backgroundImage: `url(${work.img})` }"></div>
-        <p>{{ work.title }}</p>
+        <router-link :to="work.slug">
+          <div class="work-img" :style="{ backgroundImage: `url(${work.img})` }"></div>
+          <p>{{ work.title }}</p>
+        </router-link>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+  import Works from '../works.js'
+
   export default {
     data () {
       return {
-        works: [
-          {
-            title: 'brainstorm id supply',
-            img: '/static/brainstorm.jpg',
-            tags: [
-              'visual design',
-              'branding',
-              'illustration'
-            ],
-            slug: 'uxpa'
-          },
-          {
-            title: 'chillvi.be',
-            img: '/static/chillvibe.jpg',
-            tags: [
-              'fine farts',
-              'visual art'
-            ],
-            slug: 'work'
-          },
-          {
-            title: 'UXPA: The Game of UX',
-            img: '/static/poster.jpg',
-            tags: [
-              'fine farts',
-              'visual art'
-            ],
-            slug: 'stuff'
-          },
-          {
-            title: 'VIA: Admin Vision',
-            img: '/static/adminvis.jpg',
-            tags: [
-              'fine farts',
-              'visual art'
-            ],
-            slug: 'stuffs'
-          }
-        ]
+        works: Works
       }
     }
   }
