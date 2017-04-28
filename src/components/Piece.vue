@@ -56,17 +56,29 @@
     @media (max-width: 992px)
       padding: 130px 0 130px 0
 
+    @media (max-width: 576px)
+      padding: 70px 0 70px 0
+
+      font-size: 20px
+      line-height: 30px
+
   .container-fluid
     width: 100%
     @extend .main-margin
 
   .piece-header
     height: 40vw
+
+    background-clip: content-box
     @extend .css-image
+
+    @media (max-width: 576px)
+      height: 50vw
 
   .piece-control
     background-clip: content-box
     @extend .css-image
+
     height: 26vw
 
     @media (max-width: 992px)

@@ -24,6 +24,7 @@
     align-items: center
     p
       +typeface()
+      text-align: center
       font-size: 30px
       font-variant-ligatures: discretionary-ligatures
 
