@@ -70,14 +70,13 @@
     height: 40vw
 
     background-clip: content-box
-    @extend .css-image
+    @extend .cover-img
 
     @media (max-width: 576px)
       height: 50vw
 
   .piece-control
-    background-clip: content-box
-    @extend .css-image
+    @extend .piece-img
 
     height: 26vw
 
@@ -92,5 +91,12 @@
 
     @media (max-width: 576px)
       height: 60vw
+
+  .brainstorm
+    background-size: 130%
+
+    @media (min-width: 992px)
+      &:nth-child(3)
+        margin-top: 30px
 
 </style>

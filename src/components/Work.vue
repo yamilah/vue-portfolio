@@ -54,7 +54,7 @@
 
   .work-img
     height: 65vw
-    @extend .css-image
+    @extend .cover-img
 
     display: flex
 
