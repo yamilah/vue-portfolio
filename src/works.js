@@ -29,8 +29,8 @@ export default [
     ],
     slug: 'uxpa',
     gallery: [
-      { url: '../static/img/brainstorm/poster-front.jpg', classes: ['col-lg-6', 'piece-control'] },
-      { url: '../static/img/brainstorm/poster-left.jpg', classes: ['col-lg-6', 'piece-control'] }
+      { url: '../static/img/uxpa/poster-front.jpg', classes: ['col-lg-6', 'piece-control'] },
+      { url: '../static/img/uxpa/poster-left.jpg', classes: ['col-lg-6', 'piece-control'] }
     ]
   },
   {
