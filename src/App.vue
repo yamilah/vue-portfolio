@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <main-nav></main-nav>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view class="router-container"></router-view>
+    </transition>
     <main-footer></main-footer>
   </div>
 </template>
@@ -24,6 +26,21 @@
     // Import the two typefaces I'm using
     @import url(https://fonts.googleapis.com/css?family=Mukta+Vaani:200,300,400,500,600,700,800)
     @import url(https://fonts.googleapis.com/css?family=Neuton:200,300,400,400i,700,800)
+
+  // Fade for internal pages
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s
+
+  .fade-enter-active
+    transition-delay: .5s
+
+  .fade-enter, .fade-leave-to
+    opacity: 0
+
+  .router-container
+    position: absolute
+    width: 100%
+    overflow-y: auto
 
     // Apply these to push footer to bottom
     display: flex

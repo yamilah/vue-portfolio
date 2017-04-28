@@ -7,6 +7,7 @@ import Piece from '@/components/Piece'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -23,5 +24,16 @@ export default new Router({
       name: 'Piece',
       component: Piece
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    console.log('gkhdsfajhgk')
+    setTimeout(() => {
+      let position = { x: 0, y: 0 }
+      if (savedPosition) {
+        position = savedPosition
+      }
+      window.scrollTo(position.x, position.y)
+    }, 500)
+    return null
+  }
 })
