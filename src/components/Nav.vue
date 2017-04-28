@@ -51,7 +51,7 @@
       margin-right: 20px
 
     li
-      +typeface($family: "Mukta Vaani")
+      +typeface($weight: 400, $family: "Mukta Vaani")
       letter-spacing: 2px
       @extend .uppercase
 

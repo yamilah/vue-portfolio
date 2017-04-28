@@ -23,7 +23,7 @@
     justify-content: center
     align-items: center
     p
-      +typeface($weight: 300)
+      +typeface()
       font-size: 30px
       font-variant-ligatures: discretionary-ligatures
 

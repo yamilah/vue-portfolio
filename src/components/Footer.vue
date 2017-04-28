@@ -13,6 +13,6 @@
 
   footer
     padding: 30px
-    +typeface($family: "Mukta Vaani")
-    
+    +typeface($weight: 400, $family: "Mukta Vaani")
+
 </style>

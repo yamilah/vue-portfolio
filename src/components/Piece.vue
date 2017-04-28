@@ -4,8 +4,10 @@
     <div class="container">
       <p>{{ piece.description }}</p>
     </div>
-    <div v-if="piece.gallery" v-for="image in piece.gallery">
-      <div :class="image.classes" :style="{ backgroundImage: `url(${image.url})` }"></div>
+    <div v-if="piece.gallery" class="container">
+      <div class="row">
+        <div v-for="image in piece.gallery" :class="image.classes" :style="{ backgroundImage: `url(${image.url})` }"></div>
+      </div>
     </div>
   </main>
 </template>
@@ -39,11 +41,20 @@
   @import ../sass/utils
 
   p
-    +typeface($weight: 300)
+    +typeface()
     line-height: 41px
     font-size: 30px
+    text-align: center
     font-variant-ligatures: discretionary-ligatures
     padding: 100px
+
+    &::selection
+      font-weight: 200
+      background-color: black
+      color: white
+
+    @media (max-width: 992px)
+      padding: 130px 0 130px 0
 
   .container-fluid
     width: 100%
@@ -53,8 +64,21 @@
     height: 40vw
     @extend .css-image
 
-  .piece-height
-    height: 30vw
+  .piece-control
+    background-clip: content-box
     @extend .css-image
+    height: 26vw
+
+    @media (max-width: 992px)
+      height: 50vw
+
+      &:not(:first-child)
+        margin-top: 5vw
+
+    @media (max-width: 768px)
+      height: 45vw
+
+    @media (max-width: 576px)
+      height: 60vw
 
 </style>
