@@ -37,6 +37,9 @@
 
       padding-bottom: 30px
 
+      @media (max-width: 576px)
+        font-size: 25px
+
   .icons
     display: flex
 

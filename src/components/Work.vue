@@ -45,7 +45,7 @@
 
       +typeface($weight: 200, $family: "Mukta Vaani")
       font-size: 16px
-      @extend .uppercase
+      text-transform: uppercase
       letter-spacing: 2.5px
       opacity: 0
       color: white

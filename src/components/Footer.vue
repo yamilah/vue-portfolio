@@ -33,12 +33,12 @@
 
     +typeface($weight: 400, $family: "Mukta Vaani")
 
-    @media (max-width: 576px)
+    @media (max-width: 768px)
       flex-direction: column
       align-items: normal
       align-self: center
 
-    @media (min-width: 576px) and (max-width: 768px)
+    @media (min-width: 768px) and (max-width: 992px)
       flex-direction: column
       align-items: flex-start
 

@@ -32,10 +32,6 @@
       text-transform: uppercase
       letter-spacing: 1px
 
-      // @media (min-width: 576px) and (max-width: 768px)
-      //   &:not(1)
-      //     display: none
-
     li
       height: 23px
 
@@ -46,10 +42,14 @@
         &:not(:first-child)
           margin-left: 60px
 
+      @media (min-width: 769px) and (max-width: 992px)
+        &:not(:first-child)
+          margin-left: 30px
+
       &:hover
         border-bottom: 1px solid black
 
-    @media (max-width: 576px)
+    @media (max-width: 768px)
       flex-direction: column
 
 </style>

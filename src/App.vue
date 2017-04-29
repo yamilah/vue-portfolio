@@ -24,8 +24,8 @@
 
   #app
     // Import the two typefaces I'm using
-    @import url(https://fonts.googleapis.com/css?family=Mukta+Vaani:200,300,400,500,600,700,800)
-    @import url(https://fonts.googleapis.com/css?family=Neuton:200,300,400,400i,700,800)
+    @import url(https://fonts.googleapis.com/css?family=Mukta+Vaani:400)
+    @import url(https://fonts.googleapis.com/css?family=Neuton:200)
 
     // Apply these to push footer to bottom
     display: flex

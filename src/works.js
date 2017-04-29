@@ -20,7 +20,7 @@ export default [
     title: 'chillvi.be',
     img: '/static/chillvibe.jpg',
     header_img: '../static/img/chillvibe/header.jpg',
-    description: 'Chillvi.be, a relaxation app made just for to help increase focus while studying, or for facilitating better sleep. With deep purples, transitioning pinks, and far-off landscapes, this platform makes it one-click-easy to vibe and mellow out.',
+    description: 'Chillvi.be, a relaxation app made to help increase focus while studying, or for facilitating better sleep. With deep purples, transitioning pinks, and far-off landscapes, this platform makes it one-click-easy to vibe and mellow out.',
     tags: [
       'Visual Design',
       'UX Design',
