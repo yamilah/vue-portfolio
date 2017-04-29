@@ -2,8 +2,16 @@
 =typeface($style: normal, $variant: normal, $weight: 200, $line-height: 14px, $family: "Neuton")
   font: $style $variant $weight $line-height $family
 
+a, a:hover, a:focus
+  color: black
+  text-decoration: none
+  outline: none
+
 .main-margin
   padding-top: 97px
+
+  @media (max-width: 576px)
+    padding-top: 33px
 
 .cover-img, .piece-img
     background-position: center center

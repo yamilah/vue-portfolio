@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'simple-line-icons/css/simple-line-icons.css'
 
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)

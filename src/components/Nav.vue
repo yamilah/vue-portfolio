@@ -1,6 +1,7 @@
 <template>
   <div class="sticky">
     <nav>
+      <div class="icon-menu"></div>
       <router-link to="/">
         <img src="../assets/personal-logo.svg">
       </router-link>
@@ -38,17 +39,26 @@
 
     padding: 30px
 
+    @media (max-width: 576px)
+      padding: 15px
+
+    .icon-menu
+      display: none
+
+      @media (max-width: 576px)
+        display: block
+
     ul
       display: flex
 
-    a, a:hover, a:focus
-      color: black
-      text-decoration: none
-      outline: none
+      @media (max-width: 576px)
+        display: none
 
     img
       width: 30px
-      margin-right: 20px
+
+      @media (min-width: 576px)
+        margin-right: 20px
 
     li
       +typeface($weight: 400, $family: "Mukta Vaani")

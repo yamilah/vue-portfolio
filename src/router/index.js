@@ -26,7 +26,6 @@ export default new Router({
     }
   ],
   scrollBehavior (to, from, savedPosition) {
-    console.log('gkhdsfajhgk')
     setTimeout(() => {
       let position = { x: 0, y: 0 }
       if (savedPosition) {
