@@ -40,6 +40,9 @@
 
   @import ../sass/utils
 
+  main
+    margin-bottom: 30px
+
   p
     +typeface()
     line-height: 41px
@@ -92,11 +95,17 @@
     @media (max-width: 576px)
       height: 60vw
 
-  .brainstorm
+  .zoom-img
     background-size: 130%
 
-    @media (min-width: 992px)
-      &:nth-child(3)
-        margin-top: 30px
+  .first-piece
+    height: 40vw
+
+  .first-piece-lg
+    background-size: 105%
+
+  @media (min-width: 992px)
+    .first-piece:nth-child(1), .first-piece-lg:nth-child(1)
+      margin-bottom: 30px
 
 </style>
