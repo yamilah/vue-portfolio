@@ -49,6 +49,7 @@
       letter-spacing: 2.5px
       opacity: 0
       color: white
+      text-align: center
 
       pointer-events: none
 
