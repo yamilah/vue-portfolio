@@ -5,8 +5,8 @@
         <div class="icon-menu"></div>
         <div class="icon-close"></div>
       </div>
-      <router-link to="/" class="test">
-        <img src="../assets/personal-logo.svg">
+      <router-link to="/">
+        <img @click="toggleMenu" src="../assets/personal-logo.svg">
       </router-link>
     </div>
     <div class="ul-wrapper">
