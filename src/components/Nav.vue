@@ -137,6 +137,15 @@
       border-bottom: 1px solid black
 
   @media (max-width: 767px)
+    @keyframes opacity
+      0%
+        opacity: 0
+      100%
+        opacity: 1
+
+    .ul-wrapper
+      animation: opacity 1s ease
+
     nav.mobile-close
       height: 76px
 
