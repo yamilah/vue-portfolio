@@ -59,7 +59,7 @@ export default [
     ],
     slug: 'vision',
     gallery: [
-      { url: '../static/img/adminvis/ipad-three.jpg', classes: ['col-lg-12', 'piece-control', 'first-piece-lg'] },
+      { url: '../static/img/adminvis/ipad-three.jpg', classes: ['col-lg-12', 'piece-control-sm', 'first-piece-lg'] },
       { url: '../static/img/adminvis/ipad-sing.jpg', classes: ['col-lg-6', 'piece-control', 'zoom-img'] },
       { url: '../static/img/adminvis/mac.jpg', classes: ['col-lg-6', 'piece-control', 'zoom-img'] }
     ]

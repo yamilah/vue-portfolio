@@ -78,6 +78,15 @@
     @media (max-width: 576px)
       height: 50vw
 
+
+  .piece-control-sm
+    @extend .piece-img
+
+    height: 26vw
+
+    @media (max-width: 992px)
+      height: 30vw
+
   .piece-control
     @extend .piece-img
 
