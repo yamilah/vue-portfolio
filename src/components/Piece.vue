@@ -1,21 +1,26 @@
 <template>
-  <main v-if="piece" class="container-fluid">
-    <div v-if="piece.header_img" class="col-lg-12 piece-header" :style="{ backgroundImage: `url(${piece.header_img})` }"></div>
-    <div class="container">
-      <p>{{ piece.description }}</p>
-    </div>
-    <div v-if="piece.gallery" class="container">
-      <div class="row">
-        <div v-for="image in piece.gallery" :class="image.classes" :style="{ backgroundImage: `url(${image.url})` }"></div>
+  <div>
+    <NotFound v-if="!piece" />
+    <main v-if="piece" class="container-fluid">
+      <div v-if="piece.header_img" class="col-lg-12 piece-header" :style="{ backgroundImage: `url(${piece.header_img})` }"></div>
+      <div class="container">
+        <p>{{ piece.description }}</p>
       </div>
-    </div>
-  </main>
+      <div v-if="piece.gallery" class="container">
+        <div class="row">
+          <div v-for="image in piece.gallery" :class="image.classes" :style="{ backgroundImage: `url(${image.url})` }"></div>
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
+  import NotFound from '@/components/NotFound'
   import Works from '../works.js'
 
   export default {
+    components: { NotFound },
     data () {
       return {
         piece: null
@@ -67,7 +72,6 @@
 
   .container-fluid
     width: 100%
-    @extend .main-margin
 
   .piece-header
     height: 40vw

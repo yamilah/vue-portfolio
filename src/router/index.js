@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Work from '@/components/Work'
 import Contact from '@/components/Contact'
 import Piece from '@/components/Piece'
+import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/:slug',
       name: 'Piece',
       component: Piece
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -21,9 +21,6 @@
 
   @import ../sass/utils
 
-  .container
-    @extend .main-margin
-
   main
     display: flex
     flex-direction: column

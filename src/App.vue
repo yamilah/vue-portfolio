@@ -32,8 +32,11 @@
     min-height: 100vh
     flex-direction: column
 
-  // Make footer sticky to bottom
-  main
-    flex: 1
+    .router-container
+      flex: 1
+      padding-top: 88px
+
+      @media (max-width: 768px)
+        padding-top: 76px
 
 </style>
