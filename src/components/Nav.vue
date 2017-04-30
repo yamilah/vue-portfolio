@@ -1,10 +1,13 @@
 <template>
-  <div class="sticky">
-    <nav>
+  <nav class="sticky-wrapper">
+    <div class="menu-wrapper">
       <div class="icon-menu"></div>
-      <router-link to="/">
+      <div class="icon-close"></div>
+      <router-link to="/" class="test">
         <img src="../assets/personal-logo.svg">
       </router-link>
+    </div>
+    <div class="ul-wrapper">
       <ul>
         <li>
           <router-link to="/">Work</router-link>
@@ -16,8 +19,8 @@
           <li>Resume</li>
         </a>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -27,58 +30,65 @@
 
   @import ../sass/utils
 
-  .sticky
+  .sticky-wrapper
     position: fixed
     z-index: 2
     width: 100%
+    height: 100%
     background-color: white
 
-    @media (max-width: 576px)
-      // height: 100%
-      width: 100%
+    @media (min-width: 768px)
+      display: flex
+      align-items: center
+
+      height: 88px
 
   nav
-    display: flex
-    align-items: center
 
-    padding: 30px
-
-    @media (max-width: 576px)
-      padding: 15px
-
-    .icon-menu
-      display: none
-
-      @media (max-width: 576px)
-        display: block
-
-    ul
+    .menu-wrapper
       display: flex
 
-      @media (min-width: 576px)
-        margin-left: 20px
+      margin: 30px
 
-      @media (max-width: 576px)
-        display: none
-        flex-direction: column
+      @media (min-width: 768px)
+        margin: 30px 50px 30px 30px
 
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
+        .icon-close, .icon-menu
+          display: none
 
     img
-      width: 30px
+      position: absolute
+      left: 50%
 
-      @media (max-width: 576px)
-        position: absolute
-        left: 50%
-        transform: translate(-50%, -50%)
+      height: 16px
 
-        height: 20px
+      @media (min-width: 768px)
+        position: static
+        left: auto
 
-      @media (min-width: 576px)
-        margin-right: 20px
+        height: 25px
+
+    .ul-wrapper
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+
+      @media (min-width: 768px)
+        justify-content: normal
+        display: flex
+
+    ul
+      flex-direction: column
+      text-align: center
+
+      margin-top: -120px
+
+      @media (min-width: 768px)
+        display: flex
+        flex-direction: row
+
+        margin-top: 0px
 
     li
       +typeface($weight: 400, $family: "Mukta Vaani")
@@ -87,12 +97,10 @@
 
       border-bottom: 1px solid rgba(0,0,0,0)
 
-      @media (min-width: 576px)
-        margin-right: 30px
+      margin: 30px
 
-      @media (max-width: 576px)
-        margin-bottom: 30px
-        text-align: center
+      @media (min-width: 768px)
+        margin: 0 30px 0 0
 
     li:hover, ul .router-link-active
       border-bottom: 1px solid black
