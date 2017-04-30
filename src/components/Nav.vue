@@ -1,29 +1,55 @@
 <template>
-  <nav class="sticky-wrapper">
+  <nav :class="['sticky-wrapper', navHidden ? 'mobile-close' : '']">
     <div class="menu-wrapper">
-      <div class="icon-menu"></div>
-      <div class="icon-close"></div>
+      <div @click="toggleMenu">
+        <div class="icon-menu"></div>
+        <div class="icon-close"></div>
+      </div>
       <router-link to="/" class="test">
         <img src="../assets/personal-logo.svg">
       </router-link>
     </div>
     <div class="ul-wrapper">
       <ul>
-        <li>
+        <li @click="toggleMenu">
           <router-link to="/">Work</router-link>
         </li>
-        <li>
+        <li @click="toggleMenu">
           <router-link to="/contact">Contact</router-link>
         </li>
-        <a href="/static/resume.pdf" target="_blank">
-          <li>Resume</li>
-        </a>
+        <li @click="toggleMenu">
+          <a href="/static/resume.pdf" target="_blank">Resume</a>
+        </li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
+  export default {
+    data () {
+      return {
+        navHidden: true
+      }
+    },
+    mounted () {
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.resizeCallback)
+        this.resizeCallback()
+      })
+    },
+    methods: {
+      resizeCallback () {
+        if (document.documentElement.clientWidth > 767) {
+          this.navHidden = true
+        }
+      },
+      toggleMenu () {
+        console.log('ooo')
+        this.navHidden = !this.navHidden
+      }
+    }
+  }
 </script>
 
 <style lang="sass" scoped>
@@ -44,11 +70,16 @@
       height: 88px
 
   nav
-
     .menu-wrapper
       display: flex
 
       margin: 30px
+
+      .icon-menu, .icon-close
+        cursor: pointer
+
+      .icon-menu
+        display: none
 
       @media (min-width: 768px)
         margin: 30px 50px 30px 30px
@@ -104,5 +135,16 @@
 
     li:hover, ul .router-link-active
       border-bottom: 1px solid black
+
+  @media (max-width: 767px)
+    nav.mobile-close
+      height: 76px
+
+    nav.mobile-close
+      .ul-wrapper, .icon-close
+        display: none
+
+      .icon-menu
+        display: block
 
 </style>
