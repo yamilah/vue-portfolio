@@ -45,7 +45,6 @@
         }
       },
       toggleMenu () {
-        console.log('ooo')
         this.navHidden = !this.navHidden
       }
     }
