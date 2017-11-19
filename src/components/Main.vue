@@ -67,13 +67,24 @@ export default {
     .floater-loaded
       opacity: 1
       transition: opacity 1.5s ease
+      transition-delay: 2.2s
 
     .header-copy
+      @keyframes scale
+        0%
+          transform: translate(-50%, -50%) scale(1.2)
+          opacity: 0
+        100%
+          transform: translate(-50%, -50%) scale(1)
+          opacity: 1
+
       display: flex
       position: absolute
-      transform: translate(-50%, -50%)
       left: 50%
       top: 50%
+      animation: scale 2s .5s cubic-bezier(0.18, 0.98, 0.45, 1) forwards
+      animation-delay: 0.6s
+      opacity: 0
 
       img
         align-self: flex-start
