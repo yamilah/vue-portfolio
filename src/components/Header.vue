@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'Main',
+  name: 'Header',
   data () {
     return {
       floaterStyles: {},
