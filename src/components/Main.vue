@@ -2,7 +2,7 @@
   <div>
     <img src="../assets/floaters.svg" aria-hidden="true">
     <h1>Yamilah Atallah</h1>
-    <h2>whatever</h2>
+    <h2 class="icon-user"></h2>
   </div>
 </template>
 

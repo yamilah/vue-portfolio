@@ -5,6 +5,8 @@
 </template>
 
 <script>
+// eslint-disable-next-line
+import SimpleLineIcons from 'simple-line-icons/css/simple-line-icons.css'
 export default {
   name: 'app'
 }
