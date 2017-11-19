@@ -10,7 +10,9 @@ export default {
 }
 </script>
 
-<style>
-#app {
-}
+<style lang="sass">
+  @import url('https://fonts.googleapis.com/css?family=Poppins')
+
+  #app
+    font-family: 'Poppins', sans-serif
 </style>
