@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <img v-on:load="resizeCallback" :class="{'floater-loaded': floaterLoaded}" :style="floaterStyles" src="../assets/floaters.svg" class="header-img" aria-hidden="true">
+      <Floaters/>
       <div class="header-copy">
         <img src="../assets/personal-logo.svg" alt="Yamilah Atallah's personal logo.">
         <section>
@@ -14,37 +14,11 @@
 </template>
 
 <script>
+import Floaters from './Floaters.vue'
+
 export default {
   name: 'Header',
-  data () {
-    return {
-      floaterStyles: {},
-      floaterLoaded: false
-    }
-  },
-  mounted () {
-    this.$nextTick(() => {
-      window.addEventListener('resize', this.resizeCallback)
-    })
-  },
-  methods: {
-    resizeCallback () {
-      let floaters = this.$el.querySelector('.header-img')
-
-      let scale = Math.max(
-        window.innerWidth / floaters.width,
-        window.innerHeight / floaters.height
-      )
-      if (scale === Infinity) {
-        setTimeout(this.resizeCallback, 10)
-      } else {
-        this.floaterStyles = {
-          transform: `translate(-50%, -50%) scale(${scale})`
-        }
-        this.floaterLoaded = true
-      }
-    }
-  }
+  components: {Floaters}
 }
 </script>
 
@@ -54,20 +28,6 @@ export default {
     position: relative
     width: 100%
     height: 100vh
-
-    .header-img
-      background: white
-      position: relative
-      left: 50%
-      top: 50%
-      transform: translate(-50%, -50%)
-      transform-origin: center center
-      opacity: 0
-
-    .floater-loaded
-      opacity: 1
-      transition: opacity 1.5s ease
-      transition-delay: 2.2s
 
     .header-copy
       @keyframes scale
