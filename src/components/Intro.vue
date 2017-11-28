@@ -17,7 +17,7 @@
 import Floaters from './Floaters.vue'
 
 export default {
-  name: 'Header',
+  name: 'Intro',
   components: {Floaters}
 }
 </script>
@@ -28,8 +28,6 @@ export default {
     position: relative
     width: 100%
     height: 100vh
-    overflow-x: hidden
-    overflow-y: overlay
 
     .header-copy
       @keyframes scale
